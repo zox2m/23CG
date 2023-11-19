@@ -22,6 +22,8 @@ namespace SojaExiles
 			{
 				if (Player)
 				{
+					
+					 //거리확인
 					float dist = Vector3.Distance(Player.position, transform.position);
 					if (dist < 15)
 					{
@@ -45,6 +47,7 @@ namespace SojaExiles
 						}
 
 					}
+
 				}
 
 			}
