@@ -11,10 +11,13 @@ namespace SojaExiles
 		public Animator openandclose;
 		public bool open;
 		public Transform Player;
+		// 문잠금을 담당할 변수
+		public static bool door1Open; 
 
 		void Start()
 		{
 			open = false;
+			door1Open = false;
 		}
 
 		void OnMouseOver()
@@ -22,30 +25,32 @@ namespace SojaExiles
 			{
 				if (Player)
 				{
-					
-					 //거리확인
-					float dist = Vector3.Distance(Player.position, transform.position);
-					if (dist < 15)
+					if(door1Open) // 문열림값이 true일때만 열림 
 					{
-						if (open == false)
+						//거리확인
+						float dist = Vector3.Distance(Player.position, transform.position);
+						if (dist < 15)
 						{
-							if (Input.GetMouseButtonDown(0))
-							{
-								StartCoroutine(opening());
-							}
-						}
-						else
-						{
-							if (open == true)
+							if (open == false)
 							{
 								if (Input.GetMouseButtonDown(0))
 								{
-									StartCoroutine(closing());
+									StartCoroutine(opening());
 								}
+							}
+							else
+							{
+								if (open == true)
+								{
+									if (Input.GetMouseButtonDown(0))
+									{
+										StartCoroutine(closing());
+									}
+								}
+
 							}
 
 						}
-
 					}
 
 				}

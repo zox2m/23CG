@@ -3,6 +3,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+// 문 스크립트 있는 네임스페이스 
+using SojaExiles;
 
 namespace NavKeypad { 
 public class Keypad : MonoBehaviour
@@ -79,6 +81,8 @@ public class Keypad : MonoBehaviour
             if (!displayingResult)
             {
                 StartCoroutine(DisplayResultRoutine(granted));
+                //문 열림 변수 수정해줌 
+                opencloseDoor.door1Open = true;
             }
         }
         else
