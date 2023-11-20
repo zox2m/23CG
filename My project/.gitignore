@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 # fucking 
 /[Ll]ogs/shadercompiler-UnityShaderCompiler.exe0.log
+/[Uu]ser[Ss]ettings/default-2022.dwlt
+*.dwlt
