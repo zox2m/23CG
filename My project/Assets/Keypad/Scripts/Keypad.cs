@@ -77,12 +77,11 @@ public class Keypad : MonoBehaviour
         if(int.TryParse(currentInput, out var currentKombo))
         {
             //bool granted = currentKombo == keypadCombo;
-            bool granted = currentKombo == 1225;
+            bool granted = currentKombo == 0125;
             if (!displayingResult)
             {
                 StartCoroutine(DisplayResultRoutine(granted));
-                //문 열림 변수 수정해줌 
-                opencloseDoor.door1Open = true;
+                
             }
         }
         else
@@ -114,6 +113,7 @@ public class Keypad : MonoBehaviour
         onAccessDenied?.Invoke();
         panelMesh.material.SetVector("_EmissionColor", screenDeniedColor * screenIntensity);
         audioSource.PlayOneShot(accessDeniedSfx);
+        
     }
 
     private void ClearInput()
@@ -129,6 +129,8 @@ public class Keypad : MonoBehaviour
         onAccessGranted?.Invoke();
         panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
         audioSource.PlayOneShot(accessGrantedSfx);
+        //문 열림 변수 수정해줌 
+        opencloseDoor.door1Open = true;
     }
 
 }
