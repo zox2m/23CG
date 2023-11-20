@@ -17,6 +17,7 @@ public class Painter_hint : MonoBehaviour
         public void Start(){
             quizHintUI.SetActive(false);
         }
+        
         public void OnMouseDown() {
             if (ObjectClicker.uiIsActived == false) {
                 Debug.Log("click Painting");
@@ -35,5 +36,10 @@ public class Painter_hint : MonoBehaviour
             ObjectClicker.uiIsActived = false;
         }
         
-    }
+        void Update() {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                ClosePaintingHint();
+            }
+        }
+    }        
 }
