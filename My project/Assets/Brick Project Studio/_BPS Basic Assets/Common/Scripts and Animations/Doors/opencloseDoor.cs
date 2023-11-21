@@ -11,14 +11,19 @@ namespace SojaExiles
 		public Animator openandclose;
 		public bool open;
 		public Transform Player;
-		// 문잠금을 담당할 변수
-		public static bool door1Open; 
+        // 문잠금을 담당할 변수
+
+        // 오디오 소스 추가 
+        private AudioSource audioSource;
+        private AudioClip drawerOpenSound;
+        public static bool door1Open; 
 
 		void Start()
 		{
 			open = false;
 			door1Open = false;
-		}
+            audioSource = this.gameObject.GetComponent<AudioSource>();
+        }
 
 		void OnMouseOver()
 		{
@@ -64,7 +69,8 @@ namespace SojaExiles
 			print("you are opening the door");
 			openandclose.Play("Opening");
 			open = true;
-			yield return new WaitForSeconds(.5f);
+            this.audioSource.Play();
+            yield return new WaitForSeconds(.5f);
 		}
 
 		IEnumerator closing()
@@ -72,7 +78,8 @@ namespace SojaExiles
 			print("you are closing the door");
 			openandclose.Play("Closing");
 			open = false;
-			yield return new WaitForSeconds(.5f);
+            this.audioSource.Play();
+            yield return new WaitForSeconds(.5f);
 		}
 
 
