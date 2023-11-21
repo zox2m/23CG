@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 
 namespace SojaExiles
-
 {
 public class Painter_hint : MonoBehaviour
     {
         public GameObject quizHintUI; // 새 힌트 UI
-        public GameObject nintendo_ui;
         public GameObject player;
         public Camera camera;
         
@@ -22,7 +20,7 @@ public class Painter_hint : MonoBehaviour
             if (ObjectClicker.uiIsActived == false) {
                 Debug.Log("click Painting");
                 quizHintUI.SetActive(true); // 힌트 UI 활성화
-                nintendo_ui.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<PlayerMovement>().enabled = false;
                 camera.GetComponent<MouseLook>().enabled = false;
                 ObjectClicker.uiIsActived = true;
             }
@@ -31,7 +29,7 @@ public class Painter_hint : MonoBehaviour
         public void ClosePaintingHint() {
             Debug.Log("close painting hint ui");
             quizHintUI.SetActive(false); // 힌트 UI 비활성화
-            nintendo_ui.GetComponent<PlayerMovement>().enabled = true;
+            player.GetComponent<PlayerMovement>().enabled = true;
             camera.GetComponent<MouseLook>().enabled = true;
             ObjectClicker.uiIsActived = false;
         }
