@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace SojaExiles
-
 {
     public class MouseLook : MonoBehaviour
     {

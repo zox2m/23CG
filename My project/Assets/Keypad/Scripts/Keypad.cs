@@ -12,8 +12,8 @@ public class Keypad : MonoBehaviour
     [Header("Events")]
     [SerializeField] private UnityEvent onAccessGranted;
     [SerializeField] private UnityEvent onAccessDenied;
-    [Header("Combination Code (9 Numbers Max)")]
-    [SerializeField] private int keypadCombo = 1225;
+    //[Header("Combination Code (9 Numbers Max)")]
+    //[SerializeField] private int keypadCombo = 1225;
 
     public UnityEvent OnAccessGranted => onAccessGranted;
     public UnityEvent OnAccessDenied => onAccessDenied;
