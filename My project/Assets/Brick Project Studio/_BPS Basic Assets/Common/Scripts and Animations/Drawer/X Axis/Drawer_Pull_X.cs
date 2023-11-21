@@ -69,7 +69,7 @@ namespace SojaExiles
 		{
 			print("you are closing the door");
 			pull_01.Play("closepush_01");
-			this.audioSource.Play();
+			//this.audioSource.Play();
 			open = false;
 			yield return new WaitForSeconds(.5f);
 		}
