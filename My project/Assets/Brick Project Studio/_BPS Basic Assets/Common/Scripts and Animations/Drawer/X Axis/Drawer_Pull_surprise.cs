@@ -58,7 +58,7 @@ public class Drawer_Pull_X : MonoBehaviour
 	{
 		print("you are opening the door");
 		pull_01.Play("openpull_01");
-		this.audioSource.PlayOneShot();
+		//this.audioSource.PlayOneShot();
 		open = true;
 		yield return new WaitForSeconds(.5f);
 	}
