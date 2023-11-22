@@ -37,7 +37,7 @@ public class Letter_hint : MonoBehaviour
             Debug.Log("close painting hint ui");
             letterHintUI.SetActive(false); // 힌트 UI 비활성화
 
-            this.audioSource.Stop();
+            
             player.GetComponent<PlayerMovement>().enabled = true;
             camera.GetComponent<MouseLook>().enabled = true;
             ObjectClicker.uiIsActived = false;
