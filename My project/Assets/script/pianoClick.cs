@@ -26,5 +26,19 @@ namespace SojaExiles
                 Debug.Log("Success piano quest");
             }
         }
+        
+        public void ClosePianoUi() {
+            Debug.Log("close painting hint ui");
+            piano_ui.SetActive(false); // 힌트 UI 비활성화
+            player.GetComponent<PlayerMovement>().enabled = true;
+            camera.GetComponent<MouseLook>().enabled = true;
+            ObjectClicker.uiIsActived = false;
+        }
+        
+        void Update() {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                ClosePianoUi();
+            }
+        }
     }
 }
