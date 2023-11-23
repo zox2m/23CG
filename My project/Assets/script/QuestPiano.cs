@@ -17,17 +17,14 @@ namespace SojaExiles
         private string[] str = new string[12] {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
         int n=0;
 
-        public GameObject[] piano_closed = new GameObject[2];
-        public GameObject[] piano_open = new GameObject[3];
-
-
-
+        public GameObject piano_ui; //피아노 건반
         public GameObject player;
         public Camera camera;
 
+
         private void Start()
         {
-            // obj = GameObject.Find("piano_ui");
+            piano_ui.SetActive(false);
             for (int i = 0; i < 12; i++)
             {
                 int index = i;
@@ -35,7 +32,19 @@ namespace SojaExiles
                 Note[index].onClick.AddListener(() => this.TaskOnClick(index));
             }
         }
-
+        
+        public void OnMouseDown() {
+            if (PianoResult == false && ObjectClicker.uiIsActived == false) {
+                Debug.Log("click piano");
+                piano_ui.SetActive(true);
+                player.GetComponent<PlayerMovement>().enabled = false;
+                camera.GetComponent<MouseLook>().enabled = false;
+                ObjectClicker.uiIsActived = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            } 
+        }
+        
         private void TaskOnClick(int index)
         {
             Debug.Log("입력 : " + index, Note[index]);
@@ -45,6 +54,12 @@ namespace SojaExiles
                 Result.text = "";
             input[n++] = index;
             Result.text += str[index] + " ";
+            
+            // 입력이 완료되면 정답 확인
+            // 마지막은 '시'를 눌러야된다는 힌트 넣기
+            if (n == 4) {
+                PrintFinish(); // 정답 확인
+            }
         }
 
         public void PrintFinish()
@@ -61,14 +76,14 @@ namespace SojaExiles
                 // GameObject.Find("piano_ui").SetActive(false);
                 ClosePiano();
                 PianoResult = true;
-                setAssets();
             }
             else    // 문제 풀기 실패
                 Result.text = "Fail";
-            n = 0;
-            for (int i = 0; i < 4; i++)
-                input[i] = -1;
+                n = 0;
+                for (int i = 0; i < 4; i++)
+                    input[i] = -1;
         }
+        
         public void PrintReset()
         {
             Debug.Log("Reset Button Click");
@@ -77,24 +92,16 @@ namespace SojaExiles
             for (int i = 0; i < 4; i++)
                 input[i] = -1;
         }
-
+        
         public void ClosePiano() {
             Debug.Log("close piano ui");
-            GameObject.Find("piano_ui").SetActive(false);
+            piano_ui.SetActive(false);
             player.GetComponent<PlayerMovement>().enabled = true;
             camera.GetComponent<MouseLook>().enabled = true;
             ObjectClicker.uiIsActived = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
-        public void setAssets() {
-            
-            for (int i = 0; i < 2; i++) {
-                piano_closed[i].SetActive(false);
-            }
-            for (int i = 0; i < 3; i++) {
-                piano_open[i].SetActive(true);
-            }
-            Debug.Log("피아노 뚜껑 열림");
-        }
     }
 }
