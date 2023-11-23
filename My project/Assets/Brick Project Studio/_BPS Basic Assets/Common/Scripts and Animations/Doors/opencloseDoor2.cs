@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SojaExiles
 
 {
-	public class opencloseDoor1 : MonoBehaviour
+	public class opencloseDoor2 : MonoBehaviour
 	{
 
 		public Animator openandclose;
