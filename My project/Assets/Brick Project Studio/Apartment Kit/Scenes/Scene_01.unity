@@ -13492,6 +13492,7 @@ MonoBehaviour:
   piano_ui: {fileID: 1572418375}
   player: {fileID: 1156532290}
   camera: {fileID: 1259289331}
+  displayResultTime: 2
 --- !u!1001 &214778835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77875,7 +77876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912877, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.724
+      value: -16.211
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912877, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -77883,7 +77884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912877, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.4
+      value: -3.381
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912877, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: m_LocalRotation.w

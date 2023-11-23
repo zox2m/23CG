@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 namespace SojaExiles
 {
     public class QuestPiano : MonoBehaviour
@@ -21,7 +22,8 @@ namespace SojaExiles
         public GameObject player;
         public Camera camera;
 
-
+        [SerializeField] private float displayResultTime = 1f;
+        
         private void Start()
         {
             piano_ui.SetActive(false);
@@ -58,6 +60,7 @@ namespace SojaExiles
             // 입력이 완료되면 정답 확인
             // 마지막은 '시'를 눌러야된다는 힌트 넣기
             if (n == 4) {
+                
                 PrintFinish(); // 정답 확인
             }
         }
@@ -74,14 +77,21 @@ namespace SojaExiles
                 // 문제 풀기 성공
                 Result.text = "Success";
                 // GameObject.Find("piano_ui").SetActive(false);
-                ClosePiano();
                 PianoResult = true;
+                // 1초 기다리고 닫힘
+                StartCoroutine(ClosePianoAfterDelay());
             }
-            else    // 문제 풀기 실패
+            else  // 문제 풀기 실패
                 Result.text = "Fail";
-                n = 0;
+                 n = 0;
                 for (int i = 0; i < 4; i++)
                     input[i] = -1;
+        }
+        
+        private IEnumerator ClosePianoAfterDelay()
+        {
+            yield return new WaitForSeconds(displayResultTime);
+            ClosePiano();
         }
         
         public void PrintReset()
