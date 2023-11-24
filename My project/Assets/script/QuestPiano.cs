@@ -80,6 +80,7 @@ namespace SojaExiles
                 PianoResult = true;
                 // 1초 기다리고 닫힘
                 StartCoroutine(ClosePianoAfterDelay());
+                opencloseDoor3.door1Open = true;
             }
             else  // 문제 풀기 실패
                 Result.text = "Fail";
