@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace SojaExiles
-
 {
 	public class opencloseDoor1 : MonoBehaviour
 	{

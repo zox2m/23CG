@@ -1017,11 +1017,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 2
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &38740788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,11 +1357,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1163633517}
+    m_TransformParent: {fileID: 81632487}
     m_Modifications:
     - target: {fileID: 2170178008488602006, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_Name
-      value: DoorFrame_Apt_01 (3)
+      value: Door3_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_Name
+      value: Door3
       objectReference: {fileID: 0}
     - target: {fileID: 7296751938604968511, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: Player
@@ -1373,15 +1377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: 1.1720009
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.6469998
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 7.754
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1946,8 +1950,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 566046649}
   - {fileID: 125081723}
+  - {fileID: 566046649}
+  - {fileID: 52789866}
+  - {fileID: 1603951615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &87408397 stripped
@@ -4191,11 +4197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 6
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &169203290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9904,6 +9910,8 @@ Transform:
   m_Children:
   - {fileID: 1503473612}
   - {fileID: 1518956078}
+  - {fileID: 1766660661}
+  - {fileID: 765140363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &360333979 stripped
@@ -11331,11 +11339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 4
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &422558804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13986,10 +13994,9 @@ Transform:
   m_Children:
   - {fileID: 1313753053}
   - {fileID: 1360863586}
-  - {fileID: 1445621451}
-  - {fileID: 1766660661}
-  - {fileID: 1603951615}
   - {fileID: 766480955}
+  - {fileID: 1445621451}
+  - {fileID: 1570923127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &547642000
@@ -19245,11 +19252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: enter
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &751798701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19581,11 +19588,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1163633517}
+    m_TransformParent: {fileID: 359226338}
     m_Modifications:
     - target: {fileID: 2170178008488602006, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_Name
-      value: DoorFrame_Apt_01
+      value: Door2_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_Name
+      value: Door2
       objectReference: {fileID: 0}
     - target: {fileID: 7296751938604968511, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: Player
@@ -19597,15 +19608,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: 6.172001
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.6469998
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 12.754
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23149,11 +23160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 3
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!4 &916179293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 761187056149873997, guid: f920163421f537643a94fbbfe25244f9, type: 3}
@@ -23176,11 +23187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 8
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &917424037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23771,7 +23782,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 540205872}
+    m_TransformParent: {fileID: 359226338}
     m_Modifications:
     - target: {fileID: 2225887874147284791, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_Name
@@ -23783,15 +23794,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.0049
+      value: 7.2748604
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5954499
+      value: 0.2249999
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.949
+      value: 11.349883
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23799,15 +23810,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23879,7 +23890,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
-    - {fileID: 7242000554107755551, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
     - {fileID: 7441725873264822087, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
     - {fileID: 9013326905665515994, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
     - {fileID: 5270135792841577756, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
@@ -25577,11 +25587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 5
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &1004893906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29897,11 +29907,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 7
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &1160818440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30251,11 +30261,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 765140363}
   - {fileID: 1023950728}
   - {fileID: 1660039996}
-  - {fileID: 1570923127}
-  - {fileID: 52789866}
   m_Father: {fileID: 2111041426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1164575673
@@ -30797,11 +30804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 1
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &1179798045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33937,11 +33944,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 0
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!1001 &1292031858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37844,9 +37851,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d7a48bf51772a4b8622d9449a3a9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 0}
+  openandclose: {fileID: 1414011771}
   open: 0
-  Player: {fileID: 0}
+  Player: {fileID: 552239441}
+--- !u!95 &1414011771 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7296751938604968510, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+  m_PrefabInstance: {fileID: 765140362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1417626492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38573,6 +38585,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
   m_PrefabInstance: {fileID: 1877135740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1445621452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
+  m_PrefabInstance: {fileID: 1877135740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f664f9a675c7ff4689df5ab3302c58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1446872468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42655,11 +42678,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1163633517}
+    m_TransformParent: {fileID: 540205872}
     m_Modifications:
     - target: {fileID: 2170178008488602006, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_Name
-      value: DoorFrame_Apt_01 (2)
+      value: Door1_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_Name
+      value: Door1
       objectReference: {fileID: 0}
     - target: {fileID: 7296751938604968511, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: Player
@@ -42671,15 +42698,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.5
+      value: 4.4020405
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.2765498
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: -0.5448828
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44229,7 +44256,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 540205872}
+    m_TransformParent: {fileID: 81632487}
     m_Modifications:
     - target: {fileID: 2225887874147284791, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_Name
@@ -44241,15 +44268,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.301
+      value: 2.570961
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5954499
+      value: 0.2249999
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.433
+      value: 8.865883
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44257,7 +44284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319333, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: m_LocalRotation.y
@@ -51986,7 +52013,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2105362555401354031, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1899623097}
   m_SourcePrefab: {fileID: 100100000, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
 --- !u!4 &1877565094 stripped
 Transform:
@@ -52323,6 +52353,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44297ac12129a474d89e1b2eb6151936, type: 3}
+--- !u!1 &1899623091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105362555401354031, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
+  m_PrefabInstance: {fileID: 1877135740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1899623097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899623091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ac5d48f7ac3dd4c942c39754704854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  bttnspeed: 0.1
+  moveDist: 0.0025
+  buttonPressedTime: 0.1
+  keypad: {fileID: 1445621452}
 --- !u!1001 &1903085714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58510,11 +58562,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6822da9a465c641a792181270776b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 
+  value: 9
   bttnspeed: 0.1
   moveDist: 0.0025
   buttonPressedTime: 0.1
-  keypad: {fileID: 0}
+  keypad: {fileID: 1766660663}
 --- !u!4 &2128789071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2312000415407262917, guid: d6b5de5048b779b49847795dabf2dd3a, type: 3}
