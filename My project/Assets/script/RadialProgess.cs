@@ -10,10 +10,13 @@ public class RadialProgress : MonoBehaviour
     float currentValue;
     public float speed;
 
+    // GameManager 인스턴스를 저장할 변수
+    private GameManager gameManager;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,10 @@ public class RadialProgress : MonoBehaviour
         else
         {
             ProgressIndicator.text = "Done";
+            
+            // 게임이 완료되면 GameManager의 GameOver 함수 호출
+            if (gameManager != null)
+                gameManager.GameOver();
         }
 
         LoadingBar.fillAmount = currentValue / 100;
