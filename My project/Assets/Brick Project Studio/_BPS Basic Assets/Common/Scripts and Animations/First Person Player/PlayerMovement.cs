@@ -8,12 +8,15 @@ namespace SojaExiles
     public class PlayerMovement : MonoBehaviour
     {
 
-        public CharacterController controller;
+        public Transform cameraTransform;
+        public CharacterController characterController;
 
-        public float speed = 5f;
-        public float gravity = -15f;
+        public float moveSpeed = 5f; // 이동 속도
+        public float jumpSpeed = 5f; // 점프 속도
+        public float gravity = -15f; // 중력
+        public float yVelocity = 0;
 
-        Vector3 velocity;
+        // Vector3 velocity;
 
         bool isGrounded;
 
@@ -24,13 +27,26 @@ namespace SojaExiles
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
-            Vector3 move = transform.right * x + transform.forward * z;
+            Vector3 moveDirection = new Vector3(x, 0, z);
 
-            controller.Move(move * speed * Time.deltaTime);
+            moveDirection = cameraTransform.TransformDirection(moveDirection);
 
-            velocity.y += gravity * Time.deltaTime;
+            moveDirection *= moveSpeed;
 
-            controller.Move(velocity * Time.deltaTime);
+            if (characterController.isGrounded) // 만약 characController 가 땅에 붙어있다면
+            {
+                yVelocity = 0;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    yVelocity = jumpSpeed;
+                }
+            }
+
+            yVelocity += gravity * Time.deltaTime;
+
+            moveDirection.y = yVelocity;
+
+            characterController.Move(moveDirection * Time.deltaTime);
 
         }
     }
