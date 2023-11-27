@@ -21,14 +21,14 @@ public class GameOverManager : MonoBehaviour
             quitButton.onClick.AddListener(QuitGame);
     }
 
-    void RestartGame()
+    public void RestartGame()
     {
         // 재시작 버튼 클릭 시 실행할 동작
         // 여기에서는 현재 씬을 다시 로드하는 것으로 가정합니다.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    void QuitGame()
+    public void QuitGame()
     {
         // 나가기 버튼 클릭 시 실행할 동작
         // 여기에서는 게임을 종료하는 것으로 가정합니다.
