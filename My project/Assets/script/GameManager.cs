@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             gameOverUI.SetActive(true);
 
         // 시간을 멈추기
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         ObjectClicker.uiIsActived = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
