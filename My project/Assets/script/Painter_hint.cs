@@ -35,7 +35,7 @@ public class Painter_hint : MonoBehaviour
         }
         
         void Update() {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (Input.GetKeyDown(KeyCode.Q)) {
                 ClosePaintingHint();
             }
         }

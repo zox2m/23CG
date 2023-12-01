@@ -35,7 +35,7 @@ public class musicsheet_hint : MonoBehaviour
         }
         
         void Update() {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (Input.GetKeyDown(KeyCode.Q)) {
                 ClosmusicsheetHint();
             }
         }
