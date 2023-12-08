@@ -13,7 +13,7 @@ namespace SojaExiles
         public static bool PianoResult = false;
         public TextMeshProUGUI Result;
         public Button[] Note = new Button[12];
-        private int[] answer = new int[4] { 4, 7, 1, 2 };
+        private int[] answer = new int[4] { 0, 7, 2, 5 };
         private int[] input = new int[4] { -1, -1, -1, -1 };
         private string[] str = new string[12] {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
         int n=0;
