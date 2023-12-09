@@ -77,7 +77,7 @@ public class Keypad2 : MonoBehaviour
         if(int.TryParse(currentInput, out var currentKombo))
         {
             //bool granted = currentKombo == keypadCombo;
-            bool granted = currentKombo == 2222;
+            bool granted = currentKombo == 5665;
             if (!displayingResult)
             {
                 StartCoroutine(DisplayResultRoutine(granted));
