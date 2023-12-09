@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zombie_patrol : MonoBehaviour
+public class zombie_move : MonoBehaviour
 {
     Rigidbody rb;
     Transform target;
@@ -28,8 +28,9 @@ public class zombie_patrol : MonoBehaviour
     void FollowTarget()
     {
         if(Vector3.Distance(transform.position,target.position) > contactDistance &&follow){
+            //이게 원본코드인데, y방향으로도 따라와서 문제이다. 플레이어 기준점이 공중에 있나봄 ;;
             transform.position = Vector3.MoveTowards(transform.position, target.position,moveSpeed*Time.deltaTime);
-
+            
             //타겟 방향보기 
             Vector3 dir = target.transform.position - this.transform.position;
 
