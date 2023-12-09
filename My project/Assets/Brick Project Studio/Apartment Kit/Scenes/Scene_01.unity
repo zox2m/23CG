@@ -2488,7 +2488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75e9b41cad6ec4943a8e00026c05ea32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b16ca6211838b354bb07a838e4a3628f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3412,7 +3412,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9760d65e2de00f043b44cd5e39432d23, type: 2}
+  - {fileID: 2100000, guid: 60b98cfd362add140aa4b0ca94b50989, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3594,6 +3594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed_Apt_01_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6816677564126679144, guid: bd82980ec0e466d48a84803eba02265f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbc72dc1cbbe64149b580bde5f19b932, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36853,7 +36857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13c3f0d1cff248243a5697fd9dba0b85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5b6b8f92219f804cae00d639d206169, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -49793,7 +49797,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736905805
 MonoBehaviour:
@@ -49815,7 +49819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6b5a2777567e6a4e9ad72e9da728d32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdfff18671301bd47b7709f17c98179c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
