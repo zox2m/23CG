@@ -27105,10 +27105,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027155390}
+  - component: {fileID: 1027155395}
   - component: {fileID: 1027155394}
   - component: {fileID: 1027155393}
   - component: {fileID: 1027155392}
-  - component: {fileID: 1027155391}
   m_Layer: 0
   m_Name: zombie
   m_TagString: Untagged
@@ -27133,20 +27133,6 @@ Transform:
   - {fileID: 1030160185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1027155391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027155389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c149736ed0a0f8a4087996f5e208d3b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  contactDistance: 1
 --- !u!135 &1027155392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27166,7 +27152,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 1.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1027155393
 CapsuleCollider:
@@ -27218,6 +27204,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1027155395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027155389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7809cb70fc22054cbab1d997e3112ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: {fileID: 1578733968}
+  moveSpeed: 1
+  distanceThreshold: 0.1
 --- !u!1001 &1029135821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45300,6 +45301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493994370ac21d24d97576b39fbe3d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypointSize: 0.5
 --- !u!4 &1578733969
 Transform:
   m_ObjectHideFlags: 0

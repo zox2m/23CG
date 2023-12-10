@@ -43,12 +43,12 @@ namespace NavKeypad
             }
 		}
 
-        private bool moving;
+        //private bool moving;
 
         private IEnumerator MoveSmooth()
         {
 
-            moving = true;
+            //moving = true;
             Vector3 startPos = transform.localPosition;
             Vector3 endPos = transform.localPosition + new Vector3(0, 0, moveDist);
 
@@ -79,7 +79,7 @@ namespace NavKeypad
             }
             transform.localPosition = endPos;
 
-            moving = false;
+            //moving = false;
         }
     }
 }
