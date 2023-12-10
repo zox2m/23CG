@@ -8,7 +8,7 @@ public class RadialProgress : MonoBehaviour
     public Text ProgressIndicator;
     public Image LoadingBar;
     float currentValue;
-    public float speed;
+    public float speed = 100;
 
     // GameManager 인스턴스를 저장할 변수
     private GameManager gameManager;
@@ -17,6 +17,7 @@ public class RadialProgress : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        
     }
 
     // Update is called once per frame

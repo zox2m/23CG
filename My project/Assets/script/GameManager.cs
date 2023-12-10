@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(currentTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
             // Debug.Log로 현재 시간을 콘솔에 출력
-            Debug.Log("Current Time: " + currentTime);
+            //Debug.Log("Current Time: " + currentTime);
         }
     }
 

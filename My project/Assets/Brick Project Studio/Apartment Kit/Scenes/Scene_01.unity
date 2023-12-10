@@ -7533,7 +7533,6 @@ GameObject:
   m_Component:
   - component: {fileID: 254994653}
   - component: {fileID: 254994654}
-  - component: {fileID: 254994655}
   m_Layer: 5
   m_Name: CircularProgressBar
   m_TagString: Untagged
@@ -7576,23 +7575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProgressIndicator: {fileID: 1588449544}
   LoadingBar: {fileID: 760938089}
-  speed: 0
---- !u!114 &254994655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254994652}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524f3436e33d8104fa270b7758ad8ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameTimeLimit: 600
-  CoverImage: {fileID: 891827216}
-  timerText: {fileID: 1588449544}
-  gameOverUI: {fileID: 756124396}
+  speed: 0.6
 --- !u!1001 &260978393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20078,7 +20061,6 @@ GameObject:
   - component: {fileID: 756124402}
   - component: {fileID: 756124401}
   - component: {fileID: 756124400}
-  - component: {fileID: 756124403}
   - component: {fileID: 756124398}
   m_Layer: 5
   m_Name: GameOverCanvas
@@ -20187,22 +20169,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &756124403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756124396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524f3436e33d8104fa270b7758ad8ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameTimeLimit: 600
-  CoverImage: {fileID: 0}
-  timerText: {fileID: 0}
-  gameOverUI: {fileID: 756124396}
 --- !u!1001 &757284210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27211,11 +27177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c149736ed0a0f8a4087996f5e208d3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  traceSpeed: 1
+  traceSpeed: 2
   traceDistance: 2
   moveSpeed: 1
   waypoints: {fileID: 1578733968}
   distanceThreshold: 0.1
+  gameManager: {fileID: 0}
 --- !u!1001 &1029135821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41804,6 +41771,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5921126462729845301, guid: bee09117d2231334d90a559b1ff7f323, type: 3}
   m_PrefabInstance: {fileID: 1481999057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1485348381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485348383}
+  - component: {fileID: 1485348382}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1485348382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485348381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524f3436e33d8104fa270b7758ad8ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTimeLimit: 600
+  CoverImage: {fileID: 0}
+  timerText: {fileID: 1588449544}
+  gameOverUI: {fileID: 756124396}
+--- !u!4 &1485348383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485348381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.720189, y: 6.25506, z: 2.7600002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1485594879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64656,3 +64671,4 @@ SceneRoots:
   - {fileID: 1027155390}
   - {fileID: 1578733969}
   - {fileID: 346029239}
+  - {fileID: 1485348383}

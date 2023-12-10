@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOverManager : MonoBehaviour
+public class GameOverUIManager : MonoBehaviour
 {
     public Text gameOverText;
     public Button restartButton;
