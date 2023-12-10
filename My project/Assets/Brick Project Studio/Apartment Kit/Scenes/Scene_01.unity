@@ -27196,8 +27196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   traceSpeed: 1
   traceDistance: 2
-  waypoints: {fileID: 1578733968}
   moveSpeed: 1
+  waypoints: {fileID: 1578733968}
   distanceThreshold: 0.1
 --- !u!1001 &1029135821
 PrefabInstance:

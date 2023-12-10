@@ -13,12 +13,12 @@ public class zombie_move : MonoBehaviour
     [Header("추적 거리")]
     [SerializeField] [ Range(0f,3f)] float traceDistance =1f;
 
-    // 이 객체에서 사용할 웨이오핀트 참조 
-    [SerializeField] private Waypoints waypoints;
-
     //기본 이동 속도
     [Header("기본 속도")]
     [SerializeField] private float moveSpeed = 1f;
+
+    // 이 객체에서 사용할 웨이오핀트 참조 
+    [SerializeField] private Waypoints waypoints;
 
     //웨이포인트와의 거리 
     [SerializeField] private float distanceThreshold = 0.1f;
@@ -26,11 +26,17 @@ public class zombie_move : MonoBehaviour
     // 현재 타겟이 되는 웨이포인트 
     private Transform currentWaypoint;
 
+    // GameManager 인스턴스를 저장할 변수
+    private GameManager gameManager;
+
     //start
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // 컴포넌트 연결 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // player의 트랜스폼 값 가져옴 
+
+        //게임 종료를 위해 게임매니저도 가져옴 
+        gameManager = FindObjectOfType<GameManager>();
 
         // 웨이포인트 1번으로 이동 
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
@@ -73,5 +79,15 @@ public class zombie_move : MonoBehaviour
         //타겟 방향보기 
         transform.LookAt(target);
 
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log("뭐가 닿음 ");
+        if(col.collider.CompareTag("Player"))
+        {
+            Debug.Log("좀비랑 닿음 ");
+            gameManager.GameOver();
+        }
     }
 }
