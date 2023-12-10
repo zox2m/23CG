@@ -7,6 +7,7 @@ namespace SojaExiles
 {
     public class PlayerMovement : MonoBehaviour
     {
+        private GameManager gameManager;
 
         public Transform cameraTransform;
         public CharacterController characterController;
@@ -23,7 +24,7 @@ namespace SojaExiles
         // Update is called once per frame
         void Update()
         {
-
+            //if(gameManager.isGameOver == true) Debug.Log("움직임 멈추기 "); 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 

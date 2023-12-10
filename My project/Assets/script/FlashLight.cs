@@ -1,36 +1,17 @@
-﻿/*
- * 2019-08-24
- * 
- * 
- *  유니티 손전등 스크립트
- *  F키로 점멸가능
- *  작성자: 서지민
- *  
- */
-
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlashLight : MonoBehaviour
 {
-    //플래시의 움직임을 위한 코드 
-    public float mouseXSensitivity = 100f;
-
-    public Transform playerBody;
-
-    float xRotation = 0f;
-
     // Start is called before the first frame update
     Light flash_light;
-    Transform tr;
+
     KeyCode[] KeyCode_List; //키코드값 케싱
 
     void Awake()
     {
         flash_light = GetComponent<Light>();
-        tr = this.transform;
 
         Key_Depoly();
     }
@@ -48,16 +29,6 @@ public class FlashLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //시야 따라다니도록 
-        float mouseX = Input.GetAxis("Mouse X") * mouseXSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseXSensitivity * Time.deltaTime;
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
-
         //F 입력시 꺼지도록
         KeyCode result = User_Input();
 

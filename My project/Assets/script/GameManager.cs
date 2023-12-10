@@ -2,23 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using SojaExiles;
 
 public class GameManager : MonoBehaviour
 {
     public float gameTimeLimit = 600.0f; // 제한 시간 (10분 = 600초)
     private float currentTime = 0.0f;
-    private bool isGameOver = false;
+    public bool isGameOver = false;
     
     //public PrefabManager PrefabManager;
     //public ItemManager ItemManager;
     public GameObject CoverImage;
-
+    public GameObject player;
+    public Camera camera;
     public Text timerText; // UI에 남은 시간을 표시할 텍스트
     public GameObject gameOverUI; // 게임 오버 UI
 
     private void Start()
     {
-        
         currentTime = gameTimeLimit;
         UpdateTimerText();
 
@@ -73,5 +74,10 @@ public class GameManager : MonoBehaviour
         ObjectClicker.uiIsActived = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        //움직임 멈추기 
+        //player.GetComponent<PlayerMovement>().enable = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        camera.GetComponent<MouseLook>().enabled = false;
     }
 }
