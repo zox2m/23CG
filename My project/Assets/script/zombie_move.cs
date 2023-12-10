@@ -32,10 +32,12 @@ public class zombie_move : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target.position,moveSpeed*Time.deltaTime);
             
             //타겟 방향보기 
-            Vector3 dir = target.transform.position - this.transform.position;
+            // Vector3 dir = target.transform.position - this.transform.position;
 
             
-			this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * moveSpeed);
+			// this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * moveSpeed);
+            // lookat 함수 있네;;; 개킹받아 
+            transform.LookAt(target);
         }
         else   
             rb.velocity = Vector3.zero;
