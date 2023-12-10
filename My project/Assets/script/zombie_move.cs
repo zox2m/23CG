@@ -83,7 +83,7 @@ public class zombie_move : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("뭐가 닿음 ");
+        //Debug.Log("뭐가 닿음 ");
         if(col.collider.CompareTag("Player"))
         {
             Debug.Log("좀비랑 닿음 ");
