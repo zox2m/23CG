@@ -1,17 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public float gameTimeLimit = 600.0f; // 제한 시간 (10분 = 600초)
     private float currentTime = 0.0f;
     private bool isGameOver = false;
+    
+    //public PrefabManager PrefabManager;
+    //public ItemManager ItemManager;
+    public GameObject CoverImage;
 
     public Text timerText; // UI에 남은 시간을 표시할 텍스트
     public GameObject gameOverUI; // 게임 오버 UI
 
     private void Start()
     {
+        
         currentTime = gameTimeLimit;
         UpdateTimerText();
 
@@ -20,6 +27,11 @@ public class GameManager : MonoBehaviour
             gameOverUI.SetActive(false);
     }
 
+    public void OnClickStartButton()
+    {
+        CoverImage.SetActive(false);
+    }
+    
     private void Update()
     {
         if (!isGameOver)

@@ -7573,9 +7573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e2d47688274a9439fef8ac495458f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgressIndicator: {fileID: 1588449544}
-  LoadingBar: {fileID: 760938089}
-  speed: 1
 --- !u!1001 &260978393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20183,6 +20180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimeLimit: 600
+  CoverImage: {fileID: 0}
   timerText: {fileID: 0}
   gameOverUI: {fileID: 756124396}
 --- !u!1001 &757284210
