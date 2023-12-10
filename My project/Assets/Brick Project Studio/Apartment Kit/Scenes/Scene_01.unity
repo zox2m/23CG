@@ -7533,6 +7533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254994653}
   - component: {fileID: 254994654}
+  - component: {fileID: 254994655}
   m_Layer: 5
   m_Name: CircularProgressBar
   m_TagString: Untagged
@@ -7573,6 +7574,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e2d47688274a9439fef8ac495458f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProgressIndicator: {fileID: 1588449544}
+  LoadingBar: {fileID: 760938089}
+  speed: 0
+--- !u!114 &254994655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254994652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524f3436e33d8104fa270b7758ad8ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTimeLimit: 600
+  CoverImage: {fileID: 891827216}
+  timerText: {fileID: 1588449544}
+  gameOverUI: {fileID: 756124396}
 --- !u!1001 &260978393
 PrefabInstance:
   m_ObjectHideFlags: 0
