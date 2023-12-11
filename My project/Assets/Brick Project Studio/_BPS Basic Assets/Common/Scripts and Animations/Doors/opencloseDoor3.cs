@@ -17,12 +17,16 @@ namespace SojaExiles
         private AudioSource audioSource;
         private AudioClip drawerOpenSound;
         public static bool door1Open; 
+		
+		// 성공 UI를 표시할 변수
+        public GameObject successUI;
 
 		void Start()
 		{
 			open = false;
 			door1Open = false;
             audioSource = this.gameObject.GetComponent<AudioSource>();
+			successUI.SetActive(false); // 초기에는 성공 UI를 비활성화
         }
 
 		void OnMouseOver()
@@ -71,6 +75,7 @@ namespace SojaExiles
 			open = true;
             this.audioSource.Play();
             yield return new WaitForSeconds(.5f);
+			
 		}
 
 		IEnumerator closing()
@@ -80,6 +85,12 @@ namespace SojaExiles
 			open = false;
             this.audioSource.Play();
             yield return new WaitForSeconds(.5f);
+			
+			// 문을 여는 동안 성공 UI를 활성화
+            successUI.SetActive(true);
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+
 		}
 
 
