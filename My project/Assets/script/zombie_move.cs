@@ -26,17 +26,11 @@ public class zombie_move : MonoBehaviour
     // 현재 타겟이 되는 웨이포인트 
     private Transform currentWaypoint;
 
-    // GameManager 인스턴스를 저장할 변수
-    [SerializeField] private GameManager gameManager;
-
     //start
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // 컴포넌트 연결 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); // player의 트랜스폼 값 가져옴 
-
-        //게임 종료를 위해 게임매니저도 가져옴 
-        gameManager = FindObjectOfType<GameManager>();
 
         // 웨이포인트 1번으로 이동 
         currentWaypoint = waypoints.GetNextWaypoint(currentWaypoint);
@@ -87,8 +81,7 @@ public class zombie_move : MonoBehaviour
         if(col.collider.CompareTag("Player"))
         {
             Debug.Log("좀비랑 닿음 ");
-            if (gameManager != null)
-                gameManager.GameOver();
+            GameManager.instance.GameOver();
         }
     }
 }

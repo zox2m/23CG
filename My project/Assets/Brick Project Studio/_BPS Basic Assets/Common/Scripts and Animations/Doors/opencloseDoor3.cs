@@ -21,7 +21,6 @@ namespace SojaExiles
 		// 성공 UI를 표시할 변수
         public GameObject successUI;
 
-		public GameManager gameManager;
 
 		void Start()
 		{
@@ -89,7 +88,7 @@ namespace SojaExiles
             yield return new WaitForSeconds(.5f);
 			
 			// 문을 여는 동안 성공 UI를 활성화
-			gameManager.GameClear();
+			GameManager.instance.GameClear();
 		}
 
 	}
