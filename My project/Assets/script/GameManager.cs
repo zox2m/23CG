@@ -7,7 +7,7 @@ using SojaExiles;
 public class GameManager : MonoBehaviour
 {
     public float gameTimeLimit = 600.0f; // 제한 시간 (10분 = 600초)
-    private float currentTime = 0.0f;
+    public float currentTime = 0.0f;
     public bool isGameOver = false;
     
     //public PrefabManager PrefabManager;
@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Text timerText; // UI에 남은 시간을 표시할 텍스트
     public GameObject gameOverUI; // 게임 오버 UI
 
+    public GameObject gameClearUI; // 게임 성공 UI
+
     private void Start()
     {
         currentTime = gameTimeLimit;
@@ -26,6 +28,9 @@ public class GameManager : MonoBehaviour
         // 초기에는 게임 오버 UI 비활성화
         if (gameOverUI != null)
             gameOverUI.SetActive(false);
+
+        if (gameClearUI != null)
+            gameClearUI.SetActive(false);
     }
 
     public void OnClickStartButton()
@@ -77,6 +82,25 @@ public class GameManager : MonoBehaviour
 
         //움직임 멈추기 
         //player.GetComponent<PlayerMovement>().enable = false;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        camera.GetComponent<MouseLook>().enabled = false;
+    }
+
+    public void GameClear()
+    {
+        isGameOver = true;
+
+        // 현관문 열면 성공 UI 활성화
+        if (gameClearUI != null)
+            gameClearUI.SetActive(true);
+
+        // 시간을 멈추기
+        Time.timeScale = 1f;
+        ObjectClicker.uiIsActived = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        //움직임 멈추기 
         player.GetComponent<PlayerMovement>().enabled = false;
         camera.GetComponent<MouseLook>().enabled = false;
     }

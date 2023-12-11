@@ -7575,7 +7575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProgressIndicator: {fileID: 1588449544}
   LoadingBar: {fileID: 760938089}
-  speed: 0.6
 --- !u!1001 &260978393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21956,6 +21955,7 @@ MonoBehaviour:
   open: 0
   Player: {fileID: 552239441}
   successUI: {fileID: 1327541279}
+  gameManager: {fileID: 1485348384}
 --- !u!82 &810247960
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42565,12 +42565,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimeLimit: 600
+  currentTime: 0
   isGameOver: 0
   CoverImage: {fileID: 0}
   player: {fileID: 1156532290}
   camera: {fileID: 1259289331}
   timerText: {fileID: 1588449544}
   gameOverUI: {fileID: 756124396}
+  gameClearUI: {fileID: 1327541279}
 --- !u!1001 &1485594879
 PrefabInstance:
   m_ObjectHideFlags: 0

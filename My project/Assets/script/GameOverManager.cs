@@ -8,7 +8,7 @@ public class GameOverUIManager : MonoBehaviour
     public Button restartButton;
     public Button quitButton;
 
-    void Start()
+    void Awake()
     {
         // 게임 오버 UI 초기화
         if (gameOverText != null)
@@ -32,11 +32,11 @@ public class GameOverUIManager : MonoBehaviour
     {
         // 나가기 버튼 클릭 시 실행할 동작
         // 여기에서는 게임을 종료하는 것으로 가정합니다.
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
     }
 
     public void ShowGameOverUI()
@@ -44,5 +44,6 @@ public class GameOverUIManager : MonoBehaviour
         // 게임 오버 UI를 활성화
         if (gameOverText != null)
             gameOverText.gameObject.SetActive(true);
+        
     }
 }

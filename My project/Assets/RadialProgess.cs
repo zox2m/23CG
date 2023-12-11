@@ -7,8 +7,6 @@ public class RadialProgress : MonoBehaviour
 {
     public Text ProgressIndicator;
     public Image LoadingBar;
-    float currentValue;
-    public float speed = 100;
 
     // GameManager 인스턴스를 저장할 변수
     private GameManager gameManager;
@@ -17,18 +15,13 @@ public class RadialProgress : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentValue < 100)
-        {
-            currentValue += speed * Time.deltaTime;
-            ProgressIndicator.text = ((int)currentValue).ToString() + "%";
-        }
-        else
+        //남은 시간이 0이 되면.. 
+        if (gameManager.currentTime == 0)
         {
             ProgressIndicator.text = "Done";
             
@@ -36,7 +29,7 @@ public class RadialProgress : MonoBehaviour
             if (gameManager != null)
                 gameManager.GameOver();
         }
-
-        LoadingBar.fillAmount = currentValue / 100;
+        //남은 시간 비율로 보여주기 
+        LoadingBar.fillAmount = gameManager.currentTime / gameManager.gameTimeLimit;
     }
 }
