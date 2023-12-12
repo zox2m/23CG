@@ -76,8 +76,11 @@ namespace SojaExiles
 			open = true;
             this.audioSource.Play();
             yield return new WaitForSeconds(.5f);
-			
-		}
+
+            // 문을 여는 동안 성공 UI를 활성화
+            GameManager.instance.GameClear();
+
+        }
 
 		IEnumerator closing()
 		{
@@ -87,8 +90,6 @@ namespace SojaExiles
             this.audioSource.Play();
             yield return new WaitForSeconds(.5f);
 			
-			// 문을 여는 동안 성공 UI를 활성화
-			GameManager.instance.GameClear();
 		}
 
 	}
