@@ -8,14 +8,14 @@ public class zombie_move : MonoBehaviour
     Rigidbody rb;
     Transform target;
     [Header("추격 속도")]
-    [SerializeField] [ Range(1f,4f)] float traceSpeed =1f;
+    [SerializeField] [ Range(1f,4f)] float traceSpeed =0.5f;
     
     [Header("추적 거리")]
     [SerializeField] [ Range(0f,3f)] float traceDistance =1f;
 
     //기본 이동 속도
     [Header("기본 속도")]
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float moveSpeed = 0.5f;
 
     // 이 객체에서 사용할 웨이오핀트 참조 
     [SerializeField] private Waypoints waypoints;
